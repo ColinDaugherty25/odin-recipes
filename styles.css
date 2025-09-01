@@ -1,0 +1,70 @@
+/* Apply a gentle red background and center all content */
+body {
+  background-color: #ffe5e5;   /* gentle red */
+  text-align: center;          /* centers inline/inline-block elements */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0 16px;
+
+  line-height: 1.6;
+  color: #1f2937;
+  letter-spacing: 0.2px;
+}
+
+/* Keep block-level elements centered */
+img, ul, ol, p, h1, h2, a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Optional: shrink recipe images */
+img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  margin: 16px auto;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.25rem; color: #6b7280; }
+
+/* Links */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* Index list */
+ul {
+  list-style: none;      /* no bullets */
+  padding-left: 0;
+}
+li + li { margin-top: 6px; }
+
+
+/* Center the whole list, but keep bullets/numbers next to left-aligned text */
+ul,
+ol {
+  display: inline-block;     /* lets the list itself be centered */
+  text-align: left;          /* keep items readable */
+  margin: 0 auto 16px;       /* center + spacing */
+  padding-left: 1.25rem;     /* restore indent so markers aren't crushed */
+  list-style: revert;        /* default bullets/numbers (undo any earlier rule) */
+  list-style-position: outside;
+}
+
+/* Give headings and paragraphs predictable spacing */
+h2 { margin-top: 24px; margin-bottom: 8px; }
+p  { margin: 0 auto 14px; max-width: 70ch; }
+
+/* Image spacing tweak so it doesn't crowd the heading */
+img { margin: 16px auto 24px; }
